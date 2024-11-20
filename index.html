@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>El Renacimiento del Nissan GTR</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <style>
+        /* General Styles */
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #121212);
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        nav ul {
+            justify-content: space-between;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff3b3b;
+        }
+
+        main, header, section, footer {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        h1, h2, h3 {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(to right, #ff3b3b, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: text-fade 2s ease-in-out;
+        }
+
+        @keyframes text-fade {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #ff3b3b;
+            margin-bottom: 1rem;
+        }
+
+        .carousel {
+            position: relative;
+            max-width: 90%;
+            height: 400px;
+            margin: 0 auto 2rem;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .carousel img.active {
+            opacity: 1;
+        }
+
+        .text-image-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .text-image-flex img {
+            max-width: 45%;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .text-image-flex img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: #121212;
+        }
+
+        footer a {
+            color: #ff3b3b;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* AOS Animations */
+        [data-aos] {
+            opacity: 0;
+            transition-property: opacity, transform;
+        }
+    </style>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>El Renacimiento del Nissan GTR</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#tecnologia">Tecnología</a></li>
+            <li><a href="#contacto" role="button">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- Inicio -->
+        <header>
+            <h1 data-aos="fade-down">El Renacimiento del Nissan GTR</h1>
+            <h2 data-aos="fade-up">Historia, Innovación y Cultura de un Supercoche Legendario</h2>
+            <div class="carousel" id="carousel">
+                <img src="/GTR/NISAN13.jpg" alt="Nissan GTR en acción" class="active">
+                <img src="/GTR/NISAN1.jpg" alt="Nissan GTR en pista">
+                <img src="/GTR/NISAN2.jpg" alt="Nissan GTR en películas">
+                <img src="/GTR/NISAN3.jpg" alt="Nissan GTR clásico">
+                <img src="/GTR/NISAN12.jpg" alt="Nissan GTR Skyline">
+                <img src="/GTR/NISAN10.jpg" alt="Nissan GTR GT-R">
+                <img src="/GTR/NISAN11.jpg" alt="Nissan GTR diseño icónico">
+            </div>
+            <p data-aos="fade-in">
+                Descubre cómo el Nissan GTR ha marcado una era en la industria automotriz, desde su diseño innovador 
+                hasta sus apariciones icónicas en videojuegos, películas y anime.
+            </p>
+        </header>
+
+        <!-- Historia -->
+        <section id="historia" data-aos="fade-right">
+            <h2>De las Calles de Japón al Escenario Mundial</h2>
+            <div class="text-image-flex">
+                <p>
+                    El Nissan GTR comenzó como el Skyline GTR, un coche de carreras que evolucionó para convertirse 
+                    en un supercoche icónico. Gracias al liderazgo de Carlos Ghosn, el GTR moderno alcanzó fama mundial.
+                </p>
+                <img src="/GTR/NISAN4.jpg" alt="Nissan GTR Skyline">
+            </div>
+        </section>
+
+        <!-- Tecnología -->
+        <section id="tecnologia" data-aos="fade-left">
+            <h2>Tecnología e Innovación</h2>
+            <div class="text-image-flex">
+                <img src="/GTR/NISAN5.webp" alt="Nissan GTR en Nürburgring">
+                <p>
+                    El Nissan GTR es conocido por sus características técnicas excepcionales: motor V6 biturbo, 
+                    transmisión de doble embrague y tracción a las cuatro ruedas. Comparado con el Porsche 911 Turbo, 
+                    el GTR ha logrado increíbles récords en Nürburgring.
+                </p>
+            </div>
+        </section>
+
+        <!-- Galería -->
+        <section id="galeria" data-aos="zoom-in">
+            <h2>El GTR en Imágenes</h2>
+            <div class="gallery">
+                <img src="/GTR/NISAN6.jpg" alt="Nissan GTR diseño icónico">
+                <img src="/GTR/NISAN7.jpg" alt="Nissan GTR concepto">
+                <img src="/GTR/NISAN8.jpg" alt="Nissan GTR edición limitada">
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" aria-label="Únete a la Comunidad del GTR" data-aos="fade-up">
+            <h2>Únete a la Comunidad del GTR</h2>
+            <form class="grid">
+                <input type="text" id="firstname" name="firstname" placeholder="Tu nombre" required>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                <button type="submit" onclick="event.preventDefault()">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container">
+        <small>
+            <a href="#historia">Historia</a> • 
+            <a href="#tecnologia">Tecnología</a> • 
+            <a href="#contacto">Contacto</a>
+        </small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Carrusel automático con fade
+        const images = document.querySelectorAll('.carousel img');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextImage, 3000); // Cambia de imagen cada 3 segundos
+    </script>
+</body>
+</html>
